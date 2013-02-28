@@ -64,7 +64,7 @@ public class SQLitePlugin extends CordovaPlugin{
 							jsonParameters[i] = a.getJSONArray("params");
 						}
 			       		self.executeSqlBatch(databaseName, queries, jsonParameters, queryIDs, transactionId);
-			       		callbackContext.success();
+			       		System.gc();
 			       	} catch (JSONException e){}
 			    }
 			}
